@@ -25,8 +25,7 @@ router.put("/api/workouts/:id", ({ body, params }, res) => {
     });
 });
 
-router.get("/api/stats", ({ body }, res) => {
-  
-});
+//tutor said to use aggregates documentation from mongoose that he linked during our session
+router.get("/api/stats", ({ body }, res) => {});
 
 module.exports = router;
