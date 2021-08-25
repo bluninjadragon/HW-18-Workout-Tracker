@@ -12,17 +12,21 @@ router.post("/api/workouts", (req, res) => {
 });
 
 router.put("/api/workouts/:id", ({ body, params }, res) => {
-  Workout.findByIdAndUpdate(params.id, {$push: {}});
-});
-
-router.get("/api/stats", ({ body }, res) => {
-  Workout.insertMany(body)
+  Workout.findByIdAndUpdate(
+    params.id,
+    { $push: { exercises: body } },
+    { new: true }
+  )
     .then((dbWorkout) => {
       res.json(dbWorkout);
     })
     .catch((err) => {
       res.status(400).json(err);
     });
+});
+
+router.get("/api/stats", ({ body }, res) => {
+  
 });
 
 module.exports = router;
