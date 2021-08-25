@@ -10,11 +10,16 @@ const workoutsSchema = new Schema({
   },
   name: {
     type: String,
+    trim: true,
     required: "What is the name of this workoout?",
   },
   duration: {
     type: Number,
     required: "How long is this workout in minutes?",
+  },
+  distance: {
+    type: Number,
+    required: "How far did you run?",
   },
   weight: {
     type: Number,
