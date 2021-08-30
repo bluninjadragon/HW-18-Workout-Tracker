@@ -7,7 +7,7 @@ const workoutsSchema = new Schema({
     type: Date,
     default: () => new Date(),
   },
-
+  //for whatever reason, the exercises array is not populating correctly in MONGO. Need to ask instructor why that's the case. Even the tutor is perplexed - rest of code matches how my tutor would have done this
   exercises: [
     {
       type: {
@@ -18,7 +18,7 @@ const workoutsSchema = new Schema({
       name: {
         type: String,
         trim: true,
-        required: "What is the name of this workoout?",
+        required: "What is the name of this workout?",
       },
       duration: {
         type: Number,
