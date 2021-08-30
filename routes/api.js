@@ -36,7 +36,7 @@ router.put("/api/workouts/:id", ({ body, params }, res) => {
 });
 
 //tutor said to read the aggregates documentation from mongoose that he linked during our session
-router.get("/api/workouts/", (req, res) => {
+router.get("/api/workouts", (req, res) => {
   Workout.aggregate([
     { $addFields: { totalDuration: { $sum: `exercises.duration` } } },
   ])
