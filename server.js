@@ -1,7 +1,7 @@
 //dependencies
 const express = require("express");
 const mongoose = require("mongoose");
-
+require("dotenv");
 //port
 const PORT = process.env.PORT || 27017;
 
