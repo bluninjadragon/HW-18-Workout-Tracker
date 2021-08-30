@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const logger = require("morgan");
 require("dotenv");
+
 //port
 const PORT = process.env.PORT || 27017;
 
@@ -16,7 +17,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //connection
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
   useFindAndModify: false,
   useCreateIndex: true,
