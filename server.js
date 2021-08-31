@@ -5,7 +5,7 @@ const logger = require("morgan");
 require("dotenv");
 
 //port
-const PORT = process.env.PORT || 27017;
+const PORT = process.env.PORT || 3001;
 
 //express apps
 const app = express();
